@@ -1,0 +1,81 @@
+﻿@model CaixaEletronicoModel
+
+@{
+    ViewData["Title"] = "Caixa Eletronico";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="text-center">
+        <h1 class="display-4">Caixa Eletrônico</h1>
+    </div>
+
+    @if (ViewBag.Sucesso != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <ul>
+                @foreach (var item in ViewBag.Lista)
+                {
+                    <li>@item.quantidade nota de @item.cedula reais. </li>
+                }
+            </ul>
+        </div>
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <div class="input-group col-md-6">
+        <label>Informe a quantidade de Nota de 100: </label>
+    </div>
+
+    <div class="input-group col-md-6">
+        @Html.EditorFor(model => model.quantidade100, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <br />
+
+    <div class="input-group col-md-6">
+        <label>Informe a quantidade de Nota de 50: </label>
+    </div>
+
+    <div class="input-group col-md-6">
+        @Html.EditorFor(model => model.quantidade50, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <br />
+
+    <div class="input-group col-md-6">
+        <label>Informe a quantidade de Nota de 20: </label>
+    </div>
+
+    <div class="input-group col-md-6">
+        @Html.EditorFor(model => model.quantidade20, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <br />
+
+    <div class="input-group col-md-6">
+        <label>Informe a quantidade de Nota de 10: </label>
+    </div>
+
+    <div class="input-group col-md-6">
+        @Html.EditorFor(model => model.quantidade10, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <br />
+
+    <div class="input-group col-md-6">
+        <label>Informe o valor do Saque: </label>
+    </div>
+
+    <div class="input-group col-md-6">
+        <span class="input-group-text" id="inputGroupPrepend">R$</span>
+        @Html.EditorFor(model => model.valor, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+    <br />
+    <div class="input-group col-md-6">
+        <button type="submit" class="btn btn-primary">Sacar</button>
+    </div>
+}

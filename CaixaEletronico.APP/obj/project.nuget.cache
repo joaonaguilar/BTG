@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TiEnTUcEWCp2Z2e96xZOeHbBwU3HEgalySEQvKDYTe239sTjxwkoZto9+lo3vuOyltIYsmM4DhsSvCe2YVUG4Q==",
+  "success": true,
+  "projectFilePath": "D:\\João\\Projetos\\Pessoal\\Exemplos\\CaixaEletronico\\CaixaEletronico.APP\\CaixaEletronico.APP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JoaoOctavio\\.nuget\\packages\\bootstrap\\5.1.3\\bootstrap.5.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}
